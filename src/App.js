@@ -110,8 +110,10 @@ function App() {
     );
     setHairSelect(Math.floor(Math.random() * imgHairArray.length) + 1);
   };
+
   useEffect(() => {
     handleRandomClick();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
