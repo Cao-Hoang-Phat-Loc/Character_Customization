@@ -3,8 +3,6 @@ import "./App.css";
 import CategoryList from "./components/CategoryList";
 
 function App() {
-  // const bodylist = [1, 2, 3, 4, 5];
-  //   const [body, setBody] = useState(second);
   const imgAccessoriesArray = [
     { earrings: Array.from({ length: 32 }, (v, i) => i + 1) },
     { glasses: Array.from({ length: 17 }, (v, i) => i + 1) },
@@ -17,9 +15,9 @@ function App() {
     { layer_2: Array.from({ length: 5 }, (v, i) => i + 1) },
     { layer_3: Array.from({ length: 9 }, (v, i) => i + 1) },
   ];
-  // const imgEyebrowsArray = Array.from({ length: 15 }, (v, i) => i + 1);
+
   const imgEyesArray = Array.from({ length: 24 }, (v, i) => i + 1);
-  // const imgFacialHairArray = Array.from({ length: 17 }, (v, i) => i + 1);
+
   const imgHairArray = Array.from({ length: 73 }, (v, i) => i + 1);
   const imgMouthsArray = Array.from({ length: 24 }, (v, i) => i + 1);
   const imgNosesArray = Array.from({ length: 1 }, (v, i) => i + 1);
@@ -33,9 +31,7 @@ function App() {
   const [clothes1Select, setClothes1Select] = useState(1);
   const [clothes2Select, setClothes2Select] = useState(1);
   const [clothes3Select, setClothes3Select] = useState(1);
-  // const [eyebrowsSelect, setEyebrowsSelect] = useState(1);
   const [eyeSelect, setEyeSelect] = useState(1);
-  // const [facialHairSelect, setFacialHairSelect] = useState(1);
   const [hairSelect, setHairSelect] = useState(1);
   const [mouthsSelect, setMouthsSelect] = useState(1);
   const [nosesSelect, setNosesSelect] = useState(1);
@@ -94,7 +90,7 @@ function App() {
       Math.floor(Math.random() * imgClothessArray[2].layer_3.length) + 1
     );
     setMouthsSelect(Math.floor(Math.random() * imgMouthsArray.length) + 1);
-    // setNosesSelect(Math.floor(Math.random() * imgNosesArray.length));
+
     setEyeSelect(Math.floor(Math.random() * imgEyesArray.length) + 1);
     setGlassesSelect(
       Math.floor(Math.random() * imgAccessoriesArray[1].glasses.length) + 1
@@ -272,24 +268,6 @@ function App() {
           imgNosesArray={imgNosesArray}
           handleClick={handleClick}
         />
-
-        {/* <div className="optionList">
-          <div className="options">
-            <h2>Body</h2>
-            <div className="imgList">
-              {imgAccessoriesArray[0].earrings.map((item) => (
-                <img
-                  key={item}
-                  src={`./assets/images/accessories/earrings/${item}.png`}
-                  alt=""
-                  height="60"
-                  className="img-center"
-                  onClick={() => handleClick("earrings", item)}
-                ></img>
-              ))}
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
